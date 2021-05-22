@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Authentication Forms</title>
+    <meta name="google-signin-client_id"
+        content="784762175726-aur7r284irso4l5kju3avkunv7f7n3lu.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="cursor"></div>
+
+    <script>
+
+        const cursor = document.querySelector('.cursor');
+
+        document.addEventListener('mousemove', e => {
+            cursor.setAttribute("style", "top: " + (e.pageY - 12) + "px;" + "left: " + (e.pageX - 12) + "px")
+        })
+
+        document.addEventListener('click', () => {
+            cursor.classList.add("expand");
+
+            setTimeout(() => {
+                cursor.classList.remove("expand");
+            }, 500)
+        })
+
+    </script>
+
+    <div class="heading">Welcome Back!</div>
+    <div class="subheading">Enter your Login Credentials to get started</div>
+
+    <form>
+
+        <input type="text" placeholder="First Name" id="firstname" name="firstname"><br><br>
+
+        <input type="text" placeholder="Last Name" id="lastname" name="lastname"><br><br>
+
+        <input type="email" placeholder="name@example.com" id="email" name="email"><br><br>
+
+        <select name="dob" id="dob">
+
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+
+        </select>
+
+        <select name="dob" id="dob">
+
+            <option value="1">January</option>
+            <option value="2">February</option>
+            <option value="3">March</option>
+            <option value="4">April</option>
+            <option value="5">May</option>
+            <option value="6">June</option>
+            <option value="7">July</option>
+            <option value="8">August</option>
+            <option value="9">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+
+        </select>
+
+        <select name="dob" id="dob">
+
+            <option value="0">2000</option>
+            <option value="1">2001</option>
+            <option value="2">2002</option>
+            <option value="3">2003</option>
+            <option value="4">2004</option>
+            <option value="5">2005</option>
+            <option value="6">2006</option>
+            <option value="7">2007</option>
+            <option value="8">2008</option>
+            <option value="9">2009</option>
+            <option value="10">2010</option>
+            <option value="11">2011</option>
+            <option value="12">2012</option>
+            <option value="13">2013</option>
+            <option value="14">2014</option>
+            <option value="15">2015</option>
+            <option value="16">2016</option>
+            <option value="17">2017</option>
+            <option value="18">2018</option>
+            <option value="19">2019</option>
+            <option value="20">2020</option>
+            <option value="21">2021</option>
+
+        </select><br><br>
+
+
+        <input type="password" placeholder="Password" id="password" name="password"><br><br>
+
+        <input list="places" placeholder="       State of Residence" id="residence" name="residence">
+
+        <datalist id="places">
+            <option value="Alabama">
+            <option value="Alaska">
+            <option value="Arizona">
+            <option value="Arkansas">
+            <option value="California">
+            <option value="Colorado">
+            <option value="Connecticut">
+            <option value="Delaware">
+            <option value="Florida">
+            <option value="Georgia">
+            <option value="Hawaii">
+            <option value="Idaho">
+            <option value="Illinois">
+            <option value="Indiana">
+            <option value="Lowa">
+            <option value="Kansas">
+            <option value="Kentucky">
+            <option value="Louisiana">
+            <option value="Maine">
+            <option value="Maryland">
+            <option value="Massachusetts">
+            <option value="Michigan">
+            <option value="Minnesota">
+            <option value="Mississipi">
+            <option value="Missouri">
+            <option value="Montana">
+            <option value="Nebraska">
+            <option value="Nevada">
+            <option value="New Hampshire">
+            <option value="New Jersey">
+            <option value="New York">
+            <option value="North Carolina">
+            <option value="North Dakota">
+            <option value="Ohio">
+            <option value="Oklahoma">
+            <option value="Oregon">
+            <option value="Pennsylvania">
+            <option value="Rhode Island">
+            <option value="South Carolina">
+            <option value="South Dakota">
+            <option value="Tennessee">
+            <option value="Texas">
+            <option value="Utah">
+            <option value="Vermont">
+            <option value="Virginia">
+            <option value="Washington">
+            <option value="West Virginia">
+            <option value="Wisconsin">
+            <option value="Wyoming">
+        </datalist> <br><br>
+
+        <input type="submit">
+
+    </form>
+
+    <div class="subheading">Or sign in with your Google Account!</div>
+
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+</body>
+
+</html>
